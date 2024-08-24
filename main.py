@@ -23,12 +23,10 @@ def get_weather(api_key, city_name, date=None):
 api_key='aad50edd35ed4d579c995156242408'
 if __name__ == "__main__":
     api_key='aad50edd35ed4d579c995156242408'
-#    city_name = input("Please enter the city name: ")
-     city_name = os.getenv('CITY_NAME')
+     city_name = 'London'
     # Ask for future date
     while True:
-#        date_str = input("Please enter a future date (YYYY-MM-DD): ")
-         date_str = os.getenv('FUTURE_DATE')
+         date_str = '2028-08-30'
         try:
             future_date = datetime.strptime(date_str, "%Y-%m-%d").date()
             if future_date == datetime.today().date():
