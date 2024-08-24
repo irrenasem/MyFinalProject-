@@ -19,27 +19,26 @@ def get_weather(api_key, city_name, date=None):
         return "Failed to fetch weather data"
         
 
-#api_key = os.getenv('API_TOKEN')
-api_key='aad50edd35ed4d579c995156242408'
+api_key = os.getenv('API_TOKEN')
 if __name__ == "__main__":
-    api_key='aad50edd35ed4d579c995156242408'
-    city_name = 'London'
-    future_date = datetime.today().date()
-    # Ask for future date
-    # while True:
-    #    try:
-    #        future_date = datetime.today().date():
-    #        if future_date == datetime.today().date():
-    #            print("FYI you add Current date.")
-    #            future_date=datetime.today().date()
-    #            break
-    #       elif future_date < datetime.today().date():
-    #            print("The date must be in the future. Please try again.")
-    #        else:
-    #           break
-    #    except ValueError:
-    #       print("Invalid date format. Please enter the date in YYYY-MM-DD format.")
-    #
-    #get_weather(city_name, future_date.isoformat())
+
+    if len(sys.argv) < 2:
+        print("Usage: python main.py <city_name> [<future_date>]")
+        sys.exit(1)
+
+    city_name = sys.argv[1]
+    
+    if len(sys.argv) > 2:
+        future_date_str = sys.argv[2]
+        try:
+            future_date = datetime.strptime(future_date_str, "%Y-%m-%d").date()
+            if future_date <= datetime.today().date():
+                print("Error: The date must be in the future.")
+                sys.exit(1)
+        except ValueError:
+            print("Error: Invalid date format. Please use YYYY-MM-DD.")
+            sys.exit(1)
+    else:
+        future_date = None
 
 print (get_weather(api_key, city_name , future_date))
