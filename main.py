@@ -41,4 +41,4 @@ if __name__ == "__main__":
     
     get_weather(city_name, future_date.isoformat())
 
-print (get_weather(api_key, city_name , future_date.isoformat()))
+print (get_weather(api_key, city_name , future_date))
