@@ -26,9 +26,8 @@ if __name__ == "__main__":
      city_name = 'London'
     # Ask for future date
     while True:
-         date_str = '2028-08-30'
         try:
-            future_date = datetime.strptime(date_str, "%Y-%m-%d").date()
+            future_date = '2024-08-24'
             if future_date == datetime.today().date():
                 print("FYI you add Current date.")
                 future_date=datetime.today().date()
