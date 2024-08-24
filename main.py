@@ -36,9 +36,6 @@ def get_weather(city_name, date=None):
             print(f"Error: {response.status_code}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python main.py <city_name> [<future_date>]")
-        sys.exit(1)
     city_name = sys.argv[1]
     future_date = sys.argv[2] if len(sys.argv) > 2 else None
     get_weather(city_name, future_date)
