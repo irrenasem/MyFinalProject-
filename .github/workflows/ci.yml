@@ -25,9 +25,11 @@ jobs:
 
       - name: Run application
         run: |
-          python main.py "New York" "2024-10-01"
+          python main.py 
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }
+          CITY_NAME: "London"
+          FUTURE_DATE: "2024-09-01"
   build-and-push-docker:
     needs: test
     runs-on: ubuntu-latest
