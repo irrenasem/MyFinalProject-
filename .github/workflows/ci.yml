@@ -51,7 +51,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: grinbaum/python_examples:latest
+          tags: irrenasem/MyFinalProject-:latest
 
       - name: Logout from Docker Hub
         run: docker logout
