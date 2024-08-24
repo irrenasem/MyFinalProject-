@@ -51,7 +51,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: irrenasem/MyFinalProject1:latest
+          tags: irrenasem/myfinalproject1:latest
 
       - name: Logout from Docker Hub
         run: docker logout
