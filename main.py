@@ -1,5 +1,6 @@
 import requests
 import os
+import sys
 from datetime import datetime
 
 BASE_URL = 'http://api.weatherapi.com'
