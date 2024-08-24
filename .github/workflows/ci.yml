@@ -25,10 +25,10 @@ jobs:
 
       - name: Run application
         run: |
-          python main.py
+          python main.py <<EOF
           London
           2024-08-25
-
+          EOF
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
 
