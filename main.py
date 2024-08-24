@@ -33,5 +33,5 @@ def get_weather(api_key, city_name,date=None):
         return "Failed to fetch weather date"
 api_key = os.getenv('API_TOKEN')
 city_name = 'Tel Aviv'
-future_date = 2024-08-24
+future_date = '2024-08-24'
 print(get_weather(api_key, city_name,future_date))
