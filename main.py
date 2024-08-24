@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # Ask for future date
     while True:
         try:
-            future_date = '2024-08-24'
+            future_date = datetime.today().date():
             if future_date == datetime.today().date():
                 print("FYI you add Current date.")
                 future_date=datetime.today().date()
