@@ -23,22 +23,23 @@ def get_weather(api_key, city_name, date=None):
 api_key='aad50edd35ed4d579c995156242408'
 if __name__ == "__main__":
     api_key='aad50edd35ed4d579c995156242408'
-     city_name = 'London'
+    city_name = 'London'
+    future_date = datetime.today().date():
     # Ask for future date
-    while True:
-        try:
-            future_date = datetime.today().date():
-            if future_date == datetime.today().date():
-                print("FYI you add Current date.")
-                future_date=datetime.today().date()
-                break
-            elif future_date < datetime.today().date():
-                 print("The date must be in the future. Please try again.")
-            else:
-                break
-        except ValueError:
-            print("Invalid date format. Please enter the date in YYYY-MM-DD format.")
-    
-    get_weather(city_name, future_date.isoformat())
+    # while True:
+    #    try:
+    #        future_date = datetime.today().date():
+    #        if future_date == datetime.today().date():
+    #            print("FYI you add Current date.")
+    #            future_date=datetime.today().date()
+    #            break
+    #       elif future_date < datetime.today().date():
+    #            print("The date must be in the future. Please try again.")
+    #        else:
+    #           break
+    #    except ValueError:
+    #       print("Invalid date format. Please enter the date in YYYY-MM-DD format.")
+    #
+    #get_weather(city_name, future_date.isoformat())
 
 print (get_weather(api_key, city_name , future_date))
