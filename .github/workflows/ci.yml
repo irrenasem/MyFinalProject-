@@ -26,8 +26,7 @@ jobs:
       - name: Run application
         run: |
           python main.py
-          London
-          2024-08-30
+
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
 
