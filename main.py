@@ -24,7 +24,7 @@ api_key='aad50edd35ed4d579c995156242408'
 if __name__ == "__main__":
     api_key='aad50edd35ed4d579c995156242408'
     city_name = 'London'
-    future_date = datetime.today().date():
+    future_date = datetime.today().date()
     # Ask for future date
     # while True:
     #    try:
