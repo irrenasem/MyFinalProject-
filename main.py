@@ -2,8 +2,9 @@ import requests
 import os
 from datetime import datetime
 
+BASE_URL = 'http://api.weatherapi.com'
 def get_weather(api_key, city):
-    url = f"http://api.weatherapi.com/v1/current.json?q={city}&key={api_key}"
+    url = f"{BASE_URL}/v1/current.json?q={city}&key={api_key}"
     response = requests.get(url)
     data = response.json()
     if response.status_code == 200:
