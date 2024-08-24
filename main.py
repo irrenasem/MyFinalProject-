@@ -1,5 +1,6 @@
 import requests
 import os
+from datetime import datetime
 
 def get_weather(api_key, city):
     url = f"http://api.weatherapi.com/v1/current.json?q={city}&key={api_key}"
